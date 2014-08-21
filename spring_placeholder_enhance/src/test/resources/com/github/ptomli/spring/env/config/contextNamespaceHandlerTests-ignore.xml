@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:env="http://github.com/ptomli/schema/spring-environment"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://github.com/ptomli/schema/spring-environment http://github.com/ptomli/schema/spring-environment-1.0.xsd">
+
+	<env:property-source id="ps" location="classpath:/com/github/ptomli/spring/env/config/null.properties" ignore-resource-not-found="true"/>
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://github.com/ptomli/schema/spring-environment"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://github.com/ptomli/schema/spring-environment">
+
+
+	<xsd:import namespace="http://www.springframework.org/schema/beans" schemaLocation="http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" />
+
+    <xsd:element name="property-source">
+    	<xsd:complexType>
+    		<xsd:complexContent>
+    			<xsd:extension base="beans:identifiedType">
+    				<xsd:attribute name="location" use="required"/>
+    				<xsd:attribute name="order" type="xsd:int" default="0"/>
+    				<xsd:attribute name="ignore-resource-not-found" type="xsd:boolean" default="false"/>
+    			</xsd:extension>
+    		</xsd:complexContent>
+    	</xsd:complexType>
+    </xsd:element>
+</xsd:schema>
